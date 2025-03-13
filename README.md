@@ -7,7 +7,7 @@ Uma biblioteca em C para controlar **matrizes de LED** utilizando a **Raspberry 
 ## 📂 Estrutura do Projeto
 
 ```
-📁 Código_fonte      # Biblioteca da matriz de LED
+📁 pico_led_matix      # Biblioteca da matriz de LED
 │── 📁 inc          # Arquivos de cabeçalho
 │   ├── led_matrix.h
 │
@@ -15,16 +15,10 @@ Uma biblioteca em C para controlar **matrizes de LED** utilizando a **Raspberry 
 │   ├── led_matrix.c
 │
 │── README.md       # Documentação do projeto
-│
-📁 exemplos          # Exemplos de uso da biblioteca (cada subpasta é um projeto independente)
-│── 📁 matrix_clear               # Teste da função clear()
-│── 📁 matrix_set_pixel           # Teste da função set_color_by_xy()
-│── 📁 matrix_set_line            # Teste da função set_line()
-│── 📁 matrix_set_column          # Teste da função set_column()
 ```
 
 ✅ **`Código_fonte/`** → Contém os arquivos principais da biblioteca (`led_matrix.h` e `led_matrix.c`)
-✅ **`exemplos/`** → Contém projetos individuais para testar cada funcionalidade da matriz de LED  
+✅ **`pico_led_matrix.c`** → Contém todos os testes da aplicação    
 
 ---
 
