@@ -35,10 +35,9 @@ typedef struct pixel_t {
     uint8_t blue;
 } Pixel;
 
-
 extern PIO np_pio;
 extern uint sm;
-extern Pixel matrix[LED_COUNT];
+extern Pixel matrix[];
 
 // permite ascender um dos leds baseado nos eixos x e y
 void set_color_by_xy(uint8_t x, uint8_t y, uint8_t red, uint8_t green, uint8_t blue);
@@ -47,10 +46,10 @@ void set_color_by_xy(uint8_t x, uint8_t y, uint8_t red, uint8_t green, uint8_t b
 void set_color_by_index(uint8_t index, uint8_t red, uint8_t green, uint8_t blue);
 
 // permite ascender uma coluna inteira
-void set_column(uint8_t column, uint8_t red, uint8_t green, uint8_t blue);
+void set_color_by_column(uint8_t column, uint8_t red, uint8_t green, uint8_t blue);
 
 // permite ascender uma linha inteira
-void set_line(uint8_t column, uint8_t red, uint8_t green, uint8_t blue);
+void set_color_by_line(uint8_t column, uint8_t red, uint8_t green, uint8_t blue);
 
 // limpa a matriz
 void clear();
@@ -61,6 +60,4 @@ void init(uint8_t pin);
 // envia os dados referentes a cada pixel para o componente
 void matrix_write();
 
-// imprime um caracter ascii
-void write_ascii(char c, uint8_t red, uint8_t green, uint8_t blue);
 #endif

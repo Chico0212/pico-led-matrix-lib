@@ -27,8 +27,8 @@ void set_color_by_xy(uint8_t x, uint8_t y, uint8_t red, uint8_t green, uint8_t b
 void clear() {
     for (uint8_t i = 0; i < LED_COUNT; i++) {
         set_color_by_index(i, 0, 0, 0);
-        matrix_write();
     }
+    matrix_write();
 }
 
 void init(uint8_t pin) {
@@ -56,13 +56,13 @@ void matrix_write() {
     }
 }
 
-void set_column(uint8_t column, uint8_t red, uint8_t green, uint8_t blue) {
+void set_color_by_column(uint8_t column, uint8_t red, uint8_t green, uint8_t blue) {
     for (int i = 0; i < SIDE_SIZE; i++) {
         set_color_by_xy(i, column, red, green, blue);
     }
 }
 
-void set_line(uint8_t line, uint8_t red, uint8_t green, uint8_t blue) {
+void set_color_by_line(uint8_t line, uint8_t red, uint8_t green, uint8_t blue) {
     for (int i = 0; i < SIDE_SIZE; i++) {
         set_color_by_xy(line, i, red, green, blue);
     }
