@@ -6,6 +6,7 @@ void testa_led_por_index();
 void testa_led_por_xy();
 void testa_ascender_colunas();
 void testa_ascender_linhas();
+void print_diagonals(uint8_t red, uint8_t green, uint8_t blue);
 
 int main()
 {
@@ -25,7 +26,6 @@ void testa_led_por_index() {
     // acende tudo vermelho
     for (uint8_t i = 0; i < LED_COUNT; i++){
         set_color_by_index(i, 255, 0, 0);
-        sleep_ms(DELAY_MS);
     }
     matrix_write();
     sleep_ms(SLEEP_TEST);
@@ -34,7 +34,6 @@ void testa_led_por_index() {
     // acende tudo verde
     for (uint8_t i = 0; i < LED_COUNT; i++){
         set_color_by_index(i, 0, 255, 0);
-        sleep_ms(DELAY_MS);
     }
     matrix_write();
     sleep_ms(SLEEP_TEST);
@@ -43,7 +42,6 @@ void testa_led_por_index() {
     // acende tudo azul
     for (uint8_t i = 0; i < LED_COUNT; i++){
         set_color_by_index(i, 0, 0, 255);
-        sleep_ms(DELAY_MS);
     }
     matrix_write();
     sleep_ms(SLEEP_TEST);
@@ -52,7 +50,6 @@ void testa_led_por_index() {
     // acende tudo branco
     for (uint8_t i = 0; i < LED_COUNT; i++){
         set_color_by_index(i, 255, 255, 255);
-        sleep_ms(DELAY_MS);
     }
     matrix_write();
     sleep_ms(SLEEP_TEST);
@@ -63,7 +60,6 @@ void testa_led_por_xy() {
     for (uint8_t i = 0; i < SIDE_SIZE; i++){
         for (uint8_t j = 0; j < SIDE_SIZE; j++){
             set_color_by_xy(i, j, 255, 0, 0);
-            sleep_ms(DELAY_MS);
         }
     }
     matrix_write();
@@ -74,7 +70,6 @@ void testa_led_por_xy() {
     for (uint8_t i = 0; i < SIDE_SIZE; i++){
         for (uint8_t j = 0; j < SIDE_SIZE; j++){
             set_color_by_xy(i, j, 0, 255, 0);
-            sleep_ms(DELAY_MS);
         }
     }
     matrix_write();
@@ -85,7 +80,6 @@ void testa_led_por_xy() {
     for (uint8_t i = 0; i < SIDE_SIZE; i++){
         for (uint8_t j = 0; j < SIDE_SIZE; j++){
             set_color_by_xy(i, j, 0, 0, 255);
-            sleep_ms(DELAY_MS);
         }
     }
     matrix_write();
@@ -96,7 +90,6 @@ void testa_led_por_xy() {
     for (uint8_t i = 0; i < SIDE_SIZE; i++){
         for (uint8_t j = 0; j < SIDE_SIZE; j++){
             set_color_by_xy(i, j, 255, 255, 255);
-            sleep_ms(DELAY_MS);
         }
     }
     matrix_write();

@@ -15,6 +15,9 @@
  * 
  * Mas para usar como matriz, é śo utilizar a orientação dos índices impressos na placa. 
  * 
+ * Sobre a utilização, todas as operações que você fizer usando as funções (exceto o clear) funcionam com base em um buffer: a lista de pixels. 
+ * Então sempre que quiseres ver o resultado na matriz de leds, execute "matrix_write"
+ * 
 */
 
 #include <stdio.h>
