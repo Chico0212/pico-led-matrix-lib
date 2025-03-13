@@ -1,0 +1,8 @@
+build
+.vscode
+compile_commands.json
+pico_led_matrix.c
+*.cmake
+CMakeLists.txt
+pico_sdk_import.cmake
+ws2818b.pio
