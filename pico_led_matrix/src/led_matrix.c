@@ -31,6 +31,7 @@ void set_color_by_xy(uint8_t x, uint8_t y, uint8_t red, uint8_t green, uint8_t b
 void clear() {
     for (uint8_t i = 0; i < LED_COUNT; i++) {
         set_color_by_index(i, 0, 0, 0); // desativa cada pixel
+        sleep_ms(DELAY_MS);
     }
     matrix_write(); // envia o dado pra placa
 }
@@ -75,6 +76,7 @@ void set_color_by_column(uint8_t column, uint8_t red, uint8_t green, uint8_t blu
     for (int i = 0; i < SIDE_SIZE; i++) {
         // define a cor do pixel na posição (linha = i, coluna = column)
         set_color_by_xy(i, column, red, green, blue);
+        sleep_ms(DELAY_MS);
     }
 }
 
@@ -83,5 +85,6 @@ void set_color_by_line(uint8_t line, uint8_t red, uint8_t green, uint8_t blue) {
     for (int i = 0; i < SIDE_SIZE; i++) {
         // define a cor do pixel na posição (linha = line, coluna = i)
         set_color_by_xy(line, i, red, green, blue);
+        sleep_ms(DELAY_MS);
     }
 }

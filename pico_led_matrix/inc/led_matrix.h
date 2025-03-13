@@ -27,6 +27,7 @@
 #define INPUT_PIN 7   // pino de entrada
 #define LED_COUNT 25  // total de pinos
 #define SIDE_SIZE 5   // tamanho da linha e da coluna da matriz
+#define DELAY_MS 1    // tempo pra atualizar a matriz
 
 // guarda o estado de cada led
 typedef struct pixel_t {
